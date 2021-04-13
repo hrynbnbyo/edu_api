@@ -13,6 +13,3 @@ class UserInfo(AbstractUser):
         db_table = "bz_user"
         verbose_name = "用户表"
         verbose_name_plural = verbose_name
-
-# 将自定义的用户模型注册为django默认的user表
-AUTH_USER_MODEL = 'user.UserInfo'

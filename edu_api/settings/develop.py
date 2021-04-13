@@ -9,11 +9,12 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+import datetime
 import os
 import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #修改apps为默认的子应用目录
 sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'xadmin',
     'home',
+    'user',
     'crispy_forms',
     'reversion',
 ]
@@ -146,15 +148,17 @@ REST_FRAMEWORK = {
     # 自定义全局异常处理
     "EXCEPTION_HANDLER": "edu_api.utils.exceptions.custom_exception_handler"
 }
+AUTH_USER_MODEL = 'user.UserInfo'
 
 
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    'JWT_RESPONSE_PAYLOAD_HANDLER':'user.utils.jwt_response_payload_handler',
+}
 
-
-
-
-
-
-
+AUTHENTICATION_BACKENDS = [
+    'user.utils.UserModelBackend',
+]
 
 # 日志配置
 LOGGING = {

@@ -15,3 +15,4 @@ class NavModelSerializer(ModelSerializer):
     class Meta:
         model = Nav
         fields = ["title", "link","is_site"]
+

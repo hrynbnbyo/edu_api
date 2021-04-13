@@ -7,6 +7,7 @@ from home.models import Banner, Nav
 from home.serializers import BannerModelSerializer, NavModelSerializer
 
 from edu_api.settings import constants
+from user.models import UserInfo
 
 
 class BannerListView(ListAPIView):
@@ -23,4 +24,10 @@ class HeaderListView(ListAPIView):
 class FooterListView(ListAPIView):
     queryset = Nav.objects.filter(is_show=True, is_delete=False,position=2).order_by("orders")
     serializer_class = NavModelSerializer
+
+
+# class UserListView(ListAPIView):
+#     queryset = UserInfo.objects.filter(is_show=True, is_delete=False).order_by("orders")
+#     serializer_class = UserInfoModelSerializer
+
 
