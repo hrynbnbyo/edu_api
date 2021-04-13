@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+edu_api/__pycache__/
+edu_api/apps/home/__pycache__/
+edu_api/apps/home/migrations/__pycache__/
+edu_api/settings/__pycache__/
+edu_api/utils/__pycache__/
+templates/
