@@ -1,8 +1,11 @@
+from rest_framework.generics import CreateAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status as http_status
 
 from edu_api.libs.geetest import GeetestLib
+from user.models import UserInfo
+from user.serializers import UserModelSerializer
 from user.utils import get_user_by_account
 
 pc_geetest_id = "eceb3f15b58977f4ccbf2680069aa19d"
@@ -49,3 +52,8 @@ class CaptchaAPIView(APIView):
             result = gt.failback_validate(challenge, validate, seccode)
         result = {"status": "success"} if result else {"status": "fail"}
         return Response(result)
+
+
+class UserAPIView(CreateAPIView):
+    queryset = UserInfo.objects.all()
+    serializer_class = UserModelSerializer

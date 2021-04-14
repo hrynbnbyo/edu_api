@@ -273,3 +273,7 @@ WARNING 2021-04-14 02:27:13,068 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 230
 WARNING 2021-04-14 02:27:22,304 basehttp 124 "GET /user/captcha/ HTTP/1.1" 400 11767
 WARNING 2021-04-14 02:28:25,674 basehttp 124 "GET /user/captcha/?username=hry HTTP/1.1" 400 11853
 WARNING 2021-04-14 02:35:04,288 basehttp 124 "GET /user/captcha/?account=hry HTTP/1.1" 400 11847
+ERROR 2021-04-14 17:34:06,886 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-14 17:34:06,887 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
+ERROR 2021-04-14 17:34:06,887 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+WARNING 2021-04-14 17:44:49,704 basehttp 124 "POST /user/register/ HTTP/1.1" 400 115

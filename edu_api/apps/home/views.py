@@ -26,8 +26,4 @@ class FooterListView(ListAPIView):
     serializer_class = NavModelSerializer
 
 
-# class UserListView(ListAPIView):
-#     queryset = UserInfo.objects.filter(is_show=True, is_delete=False).order_by("orders")
-#     serializer_class = UserInfoModelSerializer
-
 

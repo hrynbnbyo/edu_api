@@ -5,4 +5,5 @@ from user import views as views2
 urlpatterns = [
     path("login/", views.obtain_jwt_token),
     path("captcha/", views2.CaptchaAPIView.as_view()),
+    path("register/", views2.UserAPIView.as_view()),
 ]
