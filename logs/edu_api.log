@@ -277,3 +277,115 @@ ERROR 2021-04-14 17:34:06,886 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
 ERROR 2021-04-14 17:34:06,887 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
 ERROR 2021-04-14 17:34:06,887 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
 WARNING 2021-04-14 17:44:49,704 basehttp 124 "POST /user/register/ HTTP/1.1" 400 115
+ERROR 2021-04-14 23:50:16,060 exceptions 18 [<user.views.SendMessageAPIView object at 0x00000224FBEFF518>] Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-04-14 23:50:16,062 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-14 23:50:28,203 exceptions 18 [<user.views.SendMessageAPIView object at 0x00000224FBFCF278>] Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-04-14 23:50:28,276 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 10221
+WARNING 2021-04-14 23:50:28,503 base 93 Not Found: /favicon.ico
+WARNING 2021-04-14 23:50:28,504 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2307
+WARNING 2021-04-14 23:55:27,494 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-04-15 00:07:22,766 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-04-15 00:13:33,089 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-04-15 00:18:51,801 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+WARNING 2021-04-15 00:19:37,067 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+ERROR 2021-04-15 00:21:58,947 exception 118 Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/user/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2021-04-15 00:22:02,291 basehttp 124 "POST /user/register HTTP/1.1" 500 70509
+ERROR 2021-04-15 00:34:07,149 exception 118 Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/user/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2021-04-15 00:34:07,316 basehttp 124 "POST /user/register HTTP/1.1" 500 70509
+WARNING 2021-04-15 00:48:36,312 basehttp 124 "POST /user/register/ HTTP/1.1" 400 38
+ERROR 2021-04-15 00:50:03,575 exception 118 Internal Server Error: /user/register
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\utils\deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 61, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\middleware\common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/user/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2021-04-15 00:50:03,734 basehttp 124 "POST /user/register HTTP/1.1" 500 70509
+ERROR 2021-04-15 01:29:55,924 exceptions 18 [<user.views.SendMessageAPIView object at 0x0000029F7D5955C0>] Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+ERROR 2021-04-15 01:29:55,925 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+WARNING 2021-04-15 01:55:10,846 basehttp 124 "POST /user/register/ HTTP/1.1" 400 97
+WARNING 2021-04-15 01:57:32,596 basehttp 124 "POST /user/register/ HTTP/1.1" 400 57
+WARNING 2021-04-15 02:12:41,708 basehttp 124 "POST /user/register/ HTTP/1.1" 400 43
+ERROR 2021-04-15 02:19:27,784 exception 118 Internal Server Error: /user/register/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\generics.py", line 190, in post
+    return self.create(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\serializers.py", line 235, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\serializers.py", line 433, in run_validation
+    value = self.validate(value)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\serializers.py", line 57, in validate
+    if redis_code.decode() != code:
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-15 02:19:28,106 basehttp 124 "POST /user/register/ HTTP/1.1" 500 20822
+ERROR 2021-04-15 02:22:45,686 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 83, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 28, in send_message
+    req = req['http_status_code']
+KeyError: 'http_status_code'
+ERROR 2021-04-15 02:22:45,867 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 500 20264
+WARNING 2021-04-15 02:24:00,796 basehttp 124 "POST /user/register/ HTTP/1.1" 400 43

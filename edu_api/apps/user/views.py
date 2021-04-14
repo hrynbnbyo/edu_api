@@ -1,9 +1,13 @@
+import random
+
+from django_redis import get_redis_connection
 from rest_framework.generics import CreateAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status as http_status
 
 from edu_api.libs.geetest import GeetestLib
+from edu_api.utils.message import Message
 from user.models import UserInfo
 from user.serializers import UserModelSerializer
 from user.utils import get_user_by_account
@@ -57,3 +61,28 @@ class CaptchaAPIView(APIView):
 class UserAPIView(CreateAPIView):
     queryset = UserInfo.objects.all()
     serializer_class = UserModelSerializer
+
+
+class SendMessageAPIView(APIView):
+    def get(self,request):
+        # 获取redis链接
+        redis_connection = get_redis_connection("sms_code")
+        # 1.60秒限制判断
+        phone = request.query_params.get("phone")
+        phone_code = redis_connection.get("sms_%s" % phone)
+        redis_connection.get("sms_%s" % phone)
+        # 2.生成验证码
+        if phone_code:
+            return Response({"message":"您已经在60秒内发送过验证码了~"})
+        code = "%06d" % random.randint(0,999999)
+        # 3.存redis
+        redis_connection.setex(f"sms_{phone}",60,code)
+        redis_connection.setex(f"mobile_{phone}",600,code)
+        # 4.发送短信验证码
+        message = Message("40d6180426417bfc57d0744a362dc108")
+        status = message.send_message(phone, code)
+        # 5.返回结果
+        if status==200:
+            return Response({"message":"发送短信成功"})
+        else:
+            return Response({"message":"发送短信失败"})

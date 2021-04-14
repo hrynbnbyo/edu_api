@@ -24,9 +24,11 @@ class Message(object):
            # 发送post请求
         req = requests.post(self.single_send_url, data=params)
         # 200代表发送成功  200以外都是失败
-        print(req)
+        req =  req.json()
+        req = req['http_status_code']
+        return req
 
 
 if __name__ == '__main__':
     message = Message("40d6180426417bfc57d0744a362dc108")
-    message.send_message("15822544679", "123456")
+    message.send_message("152923126676", "123456")
