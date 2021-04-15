@@ -389,3 +389,452 @@ Traceback (most recent call last):
 KeyError: 'http_status_code'
 ERROR 2021-04-15 02:22:45,867 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 500 20264
 WARNING 2021-04-15 02:24:00,796 basehttp 124 "POST /user/register/ HTTP/1.1" 400 43
+ERROR 2021-04-15 10:35:00,734 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001AF7B93AB38>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:35:00,736 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+WARNING 2021-04-15 10:35:48,610 basehttp 124 "POST /user/register/ HTTP/1.1" 400 137
+ERROR 2021-04-15 10:36:06,935 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001AF7BA62C18>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:36:06,935 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:36:13,315 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001AF7BA6D908>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:36:13,316 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:38:57,744 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001AF7BA6DBA8>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:38:57,744 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:42:45,760 exceptions 18 [<user.views.SendMessageAPIView object at 0x0000027FD7778F28>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:42:45,760 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:45:32,661 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001C92ABB6A58>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:45:32,661 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:48:17,178 exceptions 18 [<user.views.SendMessageAPIView object at 0x0000017FD2076860>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:48:17,178 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:54:30,759 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
+ERROR 2021-04-15 10:54:30,760 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-15 10:54:30,760 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-15 10:54:59,863 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001CEA8586160>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:54:59,863 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:57:00,633 exceptions 18 [<user.views.SendMessageAPIView object at 0x000001C8F67DCA58>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:57:00,633 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 507 29
+ERROR 2021-04-15 10:59:18,640 exceptions 18 [<user.views.SendMessageAPIView object at 0x000002578255F438>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 10:59:18,640 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 507 29
+ERROR 2021-04-15 11:02:32,085 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:02:32,085 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:02:32,086 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:03:00,116 exceptions 18 [<user.views.SendMessageAPIView object at 0x000002ADE227F710>] Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-15 11:03:00,116 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 507 29
+ERROR 2021-04-15 11:04:33,352 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 170, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 182, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001E4571AD1D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sms.yunpian.com', port=443): Max retries exceeded with url: /v2/sms/single_send.json (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E4571AD1D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 25, in send_message
+    req = requests.post(self.single_send_url, data=params)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='sms.yunpian.com', port=443): Max retries exceeded with url: /v2/sms/single_send.json (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E4571AD1D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+ERROR 2021-04-15 11:04:36,336 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 500 23739
+ERROR 2021-04-15 11:05:35,499 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 170, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connection.py", line 182, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x000001E457228BE0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='sms.yunpian.com', port=443): Max retries exceeded with url: /v2/sms/single_send.json (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E457228BE0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 25, in send_message
+    req = requests.post(self.single_send_url, data=params)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\api.py", line 119, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='sms.yunpian.com', port=443): Max retries exceeded with url: /v2/sms/single_send.json (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001E457228BE0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)))
+ERROR 2021-04-15 11:05:35,530 basehttp 124 "GET /user/message/?phone=15293126676 HTTP/1.1" 500 23739
+ERROR 2021-04-15 11:06:50,759 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 28, in send_message
+    req = req['http_status_code']
+KeyError: 'http_status_code'
+ERROR 2021-04-15 11:06:50,772 basehttp 124 "GET /user/message/?phone=15293126676 HTTP/1.1" 500 19957
+ERROR 2021-04-15 11:07:17,430 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 28, in send_message
+    req = req['http_status_code']
+KeyError: 'http_status_code'
+ERROR 2021-04-15 11:07:17,445 basehttp 124 "GET /user/message/?phone=18522074726 HTTP/1.1" 500 19957
+ERROR 2021-04-15 11:10:48,101 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 28, in send_message
+    req = req['http_status_code']
+KeyError: 'http_status_code'
+ERROR 2021-04-15 11:10:48,226 basehttp 124 "GET /user/message/?phone=15293126676 HTTP/1.1" 500 19957
+ERROR 2021-04-15 11:11:28,018 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 93, in get
+    status = message.send_message(phone, code)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\utils\message.py", line 28, in send_message
+    req = req['http_status_code']
+KeyError: 'http_status_code'
+ERROR 2021-04-15 11:11:28,033 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 500 19982
+WARNING 2021-04-15 11:19:25,109 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 400 47
+WARNING 2021-04-15 11:25:00,409 basehttp 124 "GET /user/message/?phone=18522074726&flag=1 HTTP/1.1" 400 35
+ERROR 2021-04-15 11:31:17,398 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:31:17,403 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:31:17,409 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:34:01,556 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:34:01,568 basehttp 124 "GET /home/banner/ HTTP/1.1" 500 59
+ERROR 2021-04-15 11:34:01,573 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+WARNING 2021-04-15 11:35:19,026 basehttp 124 "GET /user/message/?phone=18993085835&flag=0 HTTP/1.1" 400 65
+ERROR 2021-04-15 12:00:33,513 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'QuerySet' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    payload = jwt_payload_handler(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'QuerySet' object has no attribute 'username'
+ERROR 2021-04-15 12:00:40,436 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 20423
+ERROR 2021-04-15 12:01:08,625 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'QuerySet' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    payload = jwt_payload_handler(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'QuerySet' object has no attribute 'username'
+ERROR 2021-04-15 12:01:12,659 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 20424
+ERROR 2021-04-15 12:02:46,021 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'QuerySet' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    payload = jwt_payload_handler(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'QuerySet' object has no attribute 'username'
+ERROR 2021-04-15 12:02:50,173 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 20424
+ERROR 2021-04-15 12:07:08,781 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'QuerySet' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    payload = jwt_payload_handler(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework_jwt\compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'QuerySet' object has no attribute 'username'
+ERROR 2021-04-15 12:07:12,960 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 20424
+ERROR 2021-04-15 12:08:09,818 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 115, in post
+    if redis_code.decode() != code:
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-15 12:08:09,941 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19853
+WARNING 2021-04-15 13:02:13,620 basehttp 124 "GET /user/message/?phone=15293126676&flag=1 HTTP/1.1" 400 35

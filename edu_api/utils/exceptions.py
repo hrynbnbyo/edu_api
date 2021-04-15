@@ -9,7 +9,7 @@ log = logging.getLogger("django")
 
 
 def custom_exception_handler(exc, context):
-    response = exception_handler(exc, context)
+    response =exception_handler(exc, context)
 
     if response is None:
         view = context["view"]

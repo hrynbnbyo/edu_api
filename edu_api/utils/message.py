@@ -24,8 +24,8 @@ class Message(object):
            # 发送post请求
         req = requests.post(self.single_send_url, data=params)
         # 200代表发送成功  200以外都是失败
-        req =  req.json()
-        req = req['http_status_code']
+        # req =  req.json()
+        # req = req['http_status_code']
         return req
 
 
