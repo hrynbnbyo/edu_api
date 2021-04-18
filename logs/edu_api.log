@@ -838,3 +838,794 @@ Traceback (most recent call last):
 AttributeError: 'NoneType' object has no attribute 'decode'
 ERROR 2021-04-15 12:08:09,941 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19853
 WARNING 2021-04-15 13:02:13,620 basehttp 124 "GET /user/message/?phone=15293126676&flag=1 HTTP/1.1" 400 35
+ERROR 2021-04-15 17:17:02,167 exception 118 Internal Server Error: /user/message/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 97, in get
+    redis_connection.setex(f"mobile_{phone}",600,code,count)
+TypeError: setex() takes 4 positional arguments but 5 were given
+ERROR 2021-04-15 17:17:02,329 basehttp 124 "GET /user/message/?phone=15293126676&flag=0 HTTP/1.1" 500 19879
+ERROR 2021-04-15 17:17:36,244 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 115, in post
+    print(redis_code.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-15 17:17:36,260 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19791
+ERROR 2021-04-16 14:21:10,450 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:13,235 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19791
+ERROR 2021-04-16 14:21:19,334 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:19,346 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:21:28,742 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:28,756 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:21:28,957 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:28,970 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:21:29,140 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:29,152 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:21:29,356 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:29,372 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:21:29,741 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 120, in post
+    print(redis_count.decode())
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR 2021-04-16 14:21:29,756 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19792
+ERROR 2021-04-16 14:27:39,018 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    print(redis_code.decode())
+AttributeError: 'str' object has no attribute 'decode'
+ERROR 2021-04-16 14:27:41,669 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19837
+ERROR 2021-04-16 14:27:45,512 exception 118 Internal Server Error: /user/login2/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\edu_api\edu_api\apps\user\views.py", line 121, in post
+    print(redis_code.decode())
+AttributeError: 'str' object has no attribute 'decode'
+ERROR 2021-04-16 14:27:45,528 basehttp 124 "POST /user/login2/ HTTP/1.1" 500 19838
+WARNING 2021-04-16 14:36:57,643 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:37:03,121 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:37:05,650 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:37:07,767 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:37:12,041 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:37:19,250 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 43
+WARNING 2021-04-16 14:42:43,762 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 62
+WARNING 2021-04-16 14:42:46,946 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 62
+WARNING 2021-04-16 14:42:47,778 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 62
+WARNING 2021-04-16 14:42:48,690 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 62
+WARNING 2021-04-16 14:42:49,770 basehttp 124 "POST /user/login2/ HTTP/1.1" 400 55
+WARNING 2021-04-17 20:27:44,101 base 93 Not Found: /
+WARNING 2021-04-17 20:27:44,104 base 93 Not Found: /
+WARNING 2021-04-17 20:27:44,106 basehttp 124 "GET / HTTP/1.1" 404 2256
+WARNING 2021-04-17 20:27:44,107 basehttp 124 "GET / HTTP/1.1" 404 2256
+WARNING 2021-04-17 20:27:45,425 base 93 Not Found: /favicon.ico
+WARNING 2021-04-17 20:27:45,425 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2307
+WARNING 2021-04-17 20:27:45,432 base 93 Not Found: /favicon.ico
+WARNING 2021-04-17 20:27:45,433 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2307
+ERROR 2021-04-17 20:28:01,912 basehttp 124 "POST /admin/ HTTP/1.1" 500 59
+ERROR 2021-04-17 20:28:28,292 exception 118 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 81, in get
+    client=client)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 201, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\templatetags\xadmin_tags.py", line 25, in view_block
+    result = block_func(context, nodes, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\plugins\themes.py", line 68, in block_top_navmenu
+    ex_themes = cache.get(THEME_CACHE_KEY)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 39, in _decorator
+    raise e.parent
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 199, in get
+    value = client.get(key)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 1606, in get
+    return self.execute_command('GET', name)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-17 20:28:31,494 basehttp 124 "GET /admin/ HTTP/1.1" 500 336642
+WARNING 2021-04-17 20:30:46,121 base 93 Not Found: /
+WARNING 2021-04-17 20:30:46,123 basehttp 124 "GET / HTTP/1.1" 404 2256
+ERROR 2021-04-17 20:31:17,613 exception 118 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 81, in get
+    client=client)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 201, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\templatetags\xadmin_tags.py", line 25, in view_block
+    result = block_func(context, nodes, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\plugins\themes.py", line 68, in block_top_navmenu
+    ex_themes = cache.get(THEME_CACHE_KEY)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 39, in _decorator
+    raise e.parent
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 199, in get
+    value = client.get(key)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 1606, in get
+    return self.execute_command('GET', name)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-17 20:31:17,841 basehttp 124 "GET /admin/ HTTP/1.1" 500 336358
+WARNING 2021-04-17 20:32:06,767 base 93 Not Found: /
+WARNING 2021-04-17 20:32:06,769 basehttp 124 "GET / HTTP/1.1" 404 2256
+WARNING 2021-04-17 20:32:14,324 base 93 Not Found: /
+WARNING 2021-04-17 20:32:14,325 basehttp 124 "GET / HTTP/1.1" 404 2256
+WARNING 2021-04-17 20:32:14,932 base 93 Not Found: /favicon.ico
+WARNING 2021-04-17 20:32:14,933 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2307
+ERROR 2021-04-17 20:32:40,889 basehttp 124 "GET /admin/course/coursecategory/ HTTP/1.1" 500 59
+ERROR 2021-04-17 20:32:42,899 basehttp 124 "GET /admin/course/course/ HTTP/1.1" 500 59
+ERROR 2021-04-17 20:32:45,536 basehttp 124 "GET /admin/course/courselesson/ HTTP/1.1" 500 59
+WARNING 2021-04-18 20:18:12,553 base 93 Not Found: /
+WARNING 2021-04-18 20:18:12,554 basehttp 124 "GET / HTTP/1.1" 404 2256
+WARNING 2021-04-18 20:18:12,980 base 93 Not Found: /favicon.ico
+WARNING 2021-04-18 20:18:12,981 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2307
+ERROR 2021-04-18 20:18:44,016 exception 118 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 81, in get
+    client=client)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 201, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\templatetags\xadmin_tags.py", line 25, in view_block
+    result = block_func(context, nodes, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\plugins\themes.py", line 68, in block_top_navmenu
+    ex_themes = cache.get(THEME_CACHE_KEY)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 39, in _decorator
+    raise e.parent
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 199, in get
+    value = client.get(key)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 1606, in get
+    return self.execute_command('GET', name)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-18 20:18:46,962 basehttp 124 "GET /admin/ HTTP/1.1" 500 336359
+WARNING 2021-04-18 20:20:26,939 base 93 Not Found: /
+WARNING 2021-04-18 20:20:26,940 basehttp 124 "GET / HTTP/1.1" 404 2256
+ERROR 2021-04-18 20:20:59,244 exception 118 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 32, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 81, in get
+    client=client)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 201, in get
+    raise ConnectionInterrupted(connection=client, parent=e)
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 158, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = response.render()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\base.py", line 910, in render_annotated
+    return self.render(context)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\templatetags\xadmin_tags.py", line 25, in view_block
+    result = block_func(context, nodes, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\xadmin\plugins\themes.py", line 68, in block_top_navmenu
+    ex_themes = cache.get(THEME_CACHE_KEY)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\cache.py", line 39, in _decorator
+    raise e.parent
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django_redis\client\default.py", line 199, in get
+    value = client.get(key)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 1606, in get
+    return self.execute_command('GET', name)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10060 connecting to 192.168.92.128:6379. 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+ERROR 2021-04-18 20:20:59,428 basehttp 124 "GET /admin/ HTTP/1.1" 500 336358
+WARNING 2021-04-18 20:36:27,754 base 93 Not Found: /media/teacher/logo2x.png
+WARNING 2021-04-18 20:36:27,754 basehttp 124 "GET /media/teacher/logo2x.png HTTP/1.1" 404 1823
+WARNING 2021-04-18 21:10:14,293 base 93 Not Found: /
+WARNING 2021-04-18 21:10:14,294 basehttp 124 "GET / HTTP/1.1" 404 2363
+ERROR 2021-04-18 21:10:26,832 exception 118 Internal Server Error: /course/category/
+Traceback (most recent call last):
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\exception.py", line 35, in inner
+    response = get_response(request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\views\generic\base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\query.py", line 272, in __iter__
+    self._fetch_all()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\query.py", line 1179, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 1055, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 448, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 51, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 318, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 665, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\compiler.py", line 698, in _setup_joins
+    pieces, opts, alias)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\query.py", line 1448, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "C:\Users\Administrator\envs\demo\lib\site-packages\django\db\models\sql\query.py", line 1379, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'order' into field. Choices are: course, create_time, id, is_delete, is_show, name, orders, update_time
+ERROR 2021-04-18 21:10:27,083 basehttp 124 "GET /course/category/ HTTP/1.1" 500 167569
+WARNING 2021-04-18 21:16:13,640 base 93 Not Found: /
+WARNING 2021-04-18 21:16:13,641 basehttp 124 "GET / HTTP/1.1" 404 2363
+ERROR 2021-04-18 21:24:39,306 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:24:39,307 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:24:39,307 basehttp 124 "GET /course/category/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:34:54,725 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:34:54,726 basehttp 124 "GET /course/category/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:34:54,742 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:59:34,926 basehttp 124 "GET /course/category/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:59:34,932 basehttp 124 "GET /home/footer/ HTTP/1.1" 500 59
+ERROR 2021-04-18 21:59:34,946 basehttp 124 "GET /home/header/ HTTP/1.1" 500 59
+WARNING 2021-04-18 22:15:09,614 base 93 Not Found: /
+WARNING 2021-04-18 22:15:09,616 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 22:15:36,054 base 93 Not Found: /course/course_list/
+WARNING 2021-04-18 22:15:36,054 basehttp 124 "GET /course/course_list/ HTTP/1.1" 404 2659
+WARNING 2021-04-18 22:15:46,579 base 93 Not Found: /course/course_list/
+WARNING 2021-04-18 22:15:46,580 basehttp 124 "GET /course/course_list/ HTTP/1.1" 404 2659
+WARNING 2021-04-18 22:16:03,292 base 93 Not Found: /course/coust_list/
+WARNING 2021-04-18 22:16:03,293 basehttp 124 "GET /course/coust_list/ HTTP/1.1" 404 2657
+WARNING 2021-04-18 22:16:29,614 base 93 Not Found: /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png
+WARNING 2021-04-18 22:16:29,615 basehttp 124 "GET /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,338 base 93 Not Found: /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png
+WARNING 2021-04-18 22:58:09,341 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2021-04-18 22:58:09,342 basehttp 124 "GET /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,344 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1841
+WARNING 2021-04-18 22:58:09,349 base 93 Not Found: /media/course/2.jpeg
+WARNING 2021-04-18 22:58:09,353 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1808
+WARNING 2021-04-18 22:58:09,356 base 93 Not Found: /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg
+WARNING 2021-04-18 22:58:09,361 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2021-04-18 22:58:09,362 basehttp 124 "GET /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,366 base 93 Not Found: /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg
+WARNING 2021-04-18 22:58:09,366 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,370 basehttp 124 "GET /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,375 base 93 Not Found: /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png
+WARNING 2021-04-18 22:58:09,380 base 93 Not Found: /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg
+WARNING 2021-04-18 22:58:09,381 basehttp 124 "GET /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,384 base 93 Not Found: /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg
+WARNING 2021-04-18 22:58:09,385 basehttp 124 "GET /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,388 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,392 base 93 Not Found: /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png
+WARNING 2021-04-18 22:58:09,394 basehttp 124 "GET /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 22:58:09,399 base 93 Not Found: /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png
+WARNING 2021-04-18 22:58:09,399 basehttp 124 "GET /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:21:25,852 base 93 Not Found: /
+WARNING 2021-04-18 23:21:25,854 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 23:22:21,591 base 93 Not Found: /
+WARNING 2021-04-18 23:22:21,592 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 23:33:08,378 base 93 Not Found: /
+WARNING 2021-04-18 23:33:08,379 basehttp 124 "GET / HTTP/1.1" 404 2363
+ERROR 2021-04-18 23:33:09,109 basehttp 124 "GET /course/course_list/ HTTP/1.1" 500 59
+WARNING 2021-04-18 23:37:44,138 base 93 Not Found: /
+WARNING 2021-04-18 23:37:44,140 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 23:37:55,013 base 93 Not Found: /course/
+WARNING 2021-04-18 23:37:55,013 basehttp 124 "GET /course/ HTTP/1.1" 404 2624
+WARNING 2021-04-18 23:38:07,507 base 93 Not Found: /coursec/course_list/
+WARNING 2021-04-18 23:38:07,507 basehttp 124 "GET /coursec/course_list/ HTTP/1.1" 404 2441
+WARNING 2021-04-18 23:38:18,640 base 93 Not Found: /coursec/course_list/
+WARNING 2021-04-18 23:38:18,640 basehttp 124 "GET /coursec/course_list/ HTTP/1.1" 404 2441
+WARNING 2021-04-18 23:38:40,870 base 93 Not Found: /coursec/course_list/
+WARNING 2021-04-18 23:38:40,871 basehttp 124 "GET /coursec/course_list/ HTTP/1.1" 404 2441
+WARNING 2021-04-18 23:44:02,918 base 93 Not Found: /
+WARNING 2021-04-18 23:44:02,919 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 23:49:19,978 base 93 Not Found: /
+WARNING 2021-04-18 23:49:19,979 basehttp 124 "GET / HTTP/1.1" 404 2363
+WARNING 2021-04-18 23:53:20,795 base 93 Not Found: /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png
+WARNING 2021-04-18 23:53:20,801 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2021-04-18 23:53:20,804 basehttp 124 "GET /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,807 base 93 Not Found: /media/course/2.jpeg
+WARNING 2021-04-18 23:53:20,812 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1841
+WARNING 2021-04-18 23:53:20,814 base 93 Not Found: /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg
+WARNING 2021-04-18 23:53:20,820 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2021-04-18 23:53:20,826 base 93 Not Found: /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg
+WARNING 2021-04-18 23:53:20,826 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1808
+WARNING 2021-04-18 23:53:20,828 basehttp 124 "GET /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,832 base 93 Not Found: /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png
+WARNING 2021-04-18 23:53:20,835 base 93 Not Found: /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg
+WARNING 2021-04-18 23:53:20,836 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,839 basehttp 124 "GET /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,847 base 93 Not Found: /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg
+WARNING 2021-04-18 23:53:20,849 basehttp 124 "GET /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,858 base 93 Not Found: /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png
+WARNING 2021-04-18 23:53:20,859 basehttp 124 "GET /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,860 base 93 Not Found: /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png
+WARNING 2021-04-18 23:53:20,861 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,863 basehttp 124 "GET /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:53:20,864 basehttp 124 "GET /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,447 base 93 Not Found: /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png
+WARNING 2021-04-18 23:55:03,450 base 93 Not Found: /media/course/course-cover.jpeg
+WARNING 2021-04-18 23:55:03,456 basehttp 124 "GET /media/course/7d0ac6cc-1487-4041-b42c-a0a9546f6aee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,457 base 93 Not Found: /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg
+WARNING 2021-04-18 23:55:03,460 base 93 Not Found: /media/course/2.jpeg
+WARNING 2021-04-18 23:55:03,462 basehttp 124 "GET /media/course/course-cover.jpeg HTTP/1.1" 404 1841
+WARNING 2021-04-18 23:55:03,466 base 93 Not Found: /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png
+WARNING 2021-04-18 23:55:03,473 base 93 Not Found: /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg
+WARNING 2021-04-18 23:55:03,475 basehttp 124 "GET /media/course/a3dd8fd0-d395-4566-a573-a0e3f60d5f85.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,475 basehttp 124 "GET /media/course/2.jpeg HTTP/1.1" 404 1808
+WARNING 2021-04-18 23:55:03,480 basehttp 124 "GET /media/course/2452c9d2-3539-447b-a98a-99378a750dee.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,484 base 93 Not Found: /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png
+WARNING 2021-04-18 23:55:03,494 base 93 Not Found: /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg
+WARNING 2021-04-18 23:55:03,500 base 93 Not Found: /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg
+WARNING 2021-04-18 23:55:03,500 basehttp 124 "GET /media/course/74e724d3-5ee5-40aa-a4bf-98f866ca15ab.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,502 base 93 Not Found: /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png
+WARNING 2021-04-18 23:55:03,506 base 93 Not Found: /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png
+WARNING 2021-04-18 23:55:03,506 basehttp 124 "GET /media/course/307a9365-a113-4df8-916a-7396aa898b65.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,506 basehttp 124 "GET /media/course/788dbf38-076d-4d1e-b7cc-4b69a5abbf35.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,507 basehttp 124 "GET /media/course/9000eeed-b0af-4df4-b6fb-c2becfcc5b18.jpg HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,508 basehttp 124 "GET /media/course/25b934c3-ade0-4176-81a1-8ca905d487c4.png HTTP/1.1" 404 1910
+WARNING 2021-04-18 23:55:03,508 basehttp 124 "GET /media/course/2efe076a-8378-4980-9b94-606a0546fb93.png HTTP/1.1" 404 1910

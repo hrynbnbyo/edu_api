@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 from rest_framework import status as http_status, serializers
 
 from edu_api.libs.geetest import GeetestLib
+from edu_api.settings.constants import COUNT
 from edu_api.utils.message import Message
 from user.models import UserInfo
 from user.serializers import UserModelSerializer
@@ -74,12 +75,12 @@ class SendMessageAPIView(APIView):
             print(user)
             print(not user)
             if not user:
-                return Response("手机号不存在，请重新输入或前往注册",status=http_status.HTTP_400_BAD_REQUEST)
+                return Response({"msg":"手机号不存在，请重新输入或前往注册"},status=http_status.HTTP_400_BAD_REQUEST)
         elif flag == '1':
             user = UserInfo.objects.filter(phone=phone)
             print(user)
             if user:
-                return Response("手机号存在，请前往登录",status=http_status.HTTP_400_BAD_REQUEST)
+                return Response({"msg":"手机号存在，请前往登录"},status=http_status.HTTP_400_BAD_REQUEST)
 
         # 获取redis链接
         redis_connection = get_redis_connection("sms_code")
@@ -88,11 +89,13 @@ class SendMessageAPIView(APIView):
         redis_connection.get("sms_%s" % phone)
         # 2.生成验证码
         if phone_code:
-            return Response({"message":"您已经在60秒内发送过验证码了~"})
+            return Response({"msg":"您已经在60秒内发送过验证码了~"})
         code = "%06d" % random.randint(0,999999)
+        count = COUNT
         # 3.存redis
         redis_connection.setex(f"sms_{phone}",60,code)
         redis_connection.setex(f"mobile_{phone}",600,code)
+        redis_connection.setex(f"count_{phone}",600,count)
         # 4.发送短信验证码
         # message = Message("40d6180426417bfc57d0744a362dc108")
         # status = message.send_message(phone, code)
@@ -110,13 +113,26 @@ class PhoneLoginAPIView(APIView):
         from django_redis import get_redis_connection
         connection = get_redis_connection("sms_code")
         redis_code = connection.get(f"mobile_{phone}")
-        if redis_code.decode() != code:
-            return Response("验证码不正确", status=http_status.HTTP_400_BAD_REQUEST)
+        if not redis_code:
+            return Response({"msg":"验证码已过期或不存在"}, status=http_status.HTTP_400_BAD_REQUEST)
+        redis_code = redis_code.decode()
+        redis_count = connection.get(f"count_{phone}")
+        print(redis_count.decode())
+        print(redis_code)
+        if redis_code != code:
+            redis_count = int(redis_count.decode())
+            connection.setex(f"count_{phone}", 600, redis_count-1)
+            if redis_count == 1:
+                connection.delete(f"mobile_{phone}")
+                connection.delete(f"mobile_{redis_code}")
+                connection.delete(f"count_{phone}")
+                return Response({"msg":"验证码错误次数过多，请重新发送"}, status=http_status.HTTP_400_BAD_REQUEST)
+            return Response({"msg": "验证码不正确请重新输入，剩余{redis_count-1}次机会"}, status=http_status.HTTP_400_BAD_REQUEST)
         user = UserInfo.objects.get(phone=phone)
         from rest_framework_jwt.settings import api_settings
         jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
         jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
         payload = jwt_payload_handler(user)
         token = jwt_encode_handler(payload)
-        return Response({"username":user.username,"token":token})
+        return Response({"username": user.username, "token": token})
 

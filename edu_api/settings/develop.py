@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters'
     'corsheaders',
     'xadmin',
     'home',
+    'course',
     'user',
     'crispy_forms',
     'reversion',
@@ -179,7 +181,7 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
-}
+        }
 
 # 日志配置
 LOGGING = {
