@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.generics import ListAPIView
-from rest_framework.filters import OrderingFilter
+from rest_framework.filters import OrderingFilter, SearchFilter
 from course.models import CourseCategory, Course
 from course.pagination import CoursePageNumberPagination
-from course.serializer import CourseCategoryModelSerializer, CourseModelSerializer
+from course.serializer import CourseCategoryModelSerializer, CourseModelSerializer, CourseDetailsModelSerializer
 
 
 class CourseCategoryView(ListAPIView):
@@ -13,7 +13,7 @@ class CourseCategoryView(ListAPIView):
 
 
 class CourseListAPIView(ListAPIView):
-    queryset = Course.objects.filter(is_show=True, is_delete=False).order_by("-orders")
+    queryset = Course.objects.filter(is_show=True, is_delete=False).order_by("id")
     serializer_class = CourseModelSerializer
 
     # 指定过滤使用的模板类
@@ -28,6 +28,11 @@ class CourseListAPIView(ListAPIView):
     pagination_class = CoursePageNumberPagination
 
 
-class CourseList2APIView(ListAPIView):
+class CourseDetailsAPIView(ListAPIView):
     queryset = Course.objects.filter(is_show=True, is_delete=False)
-    serializer_class = CourseModelSerializer
+    serializer_class = CourseDetailsModelSerializer
+
+    # 指定过滤使用的模板类
+    filter_backends = [SearchFilter]
+    # 指定要过滤的字段
+    search_fields = ['id']

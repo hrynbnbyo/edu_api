@@ -16,7 +16,7 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#修改apps为默认的子应用目录
+# 修改apps为默认的子应用目录
 sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 
 
@@ -32,6 +32,22 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# 支付宝配置信息
+ALIAPY_CONFIG = {
+    # 网关地址
+    # "gateway_url": "https://openapi.alipay.com/gateway.do?",
+    "gateway_url": "https://openapi.alipaydev.com/gateway.do?",
+    "appid": "2016102200738366",
+    "app_notify_url": None,
+    "app_private_key_path": open(os.path.join(BASE_DIR, "apps/payments/keys/app_private_key.pem")).read(),
+    "alipay_public_key_path": open(os.path.join(BASE_DIR, "apps/payments/keys/alipay_public_key.pem")).read(),
+    "sign_type": "RSA2",
+    "debug": False,
+    # 支付成功后跳转的地址
+    "return_url": "http://localhost:8080/result",
+    # 同步回调地址
+    "notify_url": "http://127.0.0.1:8000/payments/result",  # 异步结果通知
+}
 
 # Application definition
 
@@ -43,9 +59,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_filters'
+    'cart',
+    # 'django_filters'
+    'order',
     'corsheaders',
     'xadmin',
+    'payments',
     'home',
     'course',
     'user',
@@ -143,19 +162,24 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 MEDIA_URL = "/media/"
 
-#允许跨域
+# 允许跨域
 CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
 
 REST_FRAMEWORK = {
     # 自定义全局异常处理
-    "EXCEPTION_HANDLER": "edu_api.utils.exceptions.custom_exception_handler"
+    "EXCEPTION_HANDLER": "edu_api.utils.exceptions.custom_exception_handler",
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_jwt.authentication.JSONWebTokenAuthentication",
+    )
 }
 AUTH_USER_MODEL = 'user.UserInfo'
 
 
 JWT_AUTH = {
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
-    'JWT_RESPONSE_PAYLOAD_HANDLER':'user.utils.jwt_response_payload_handler',
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000),
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
 }
 
 AUTHENTICATION_BACKENDS = [
@@ -181,7 +205,21 @@ CACHES = {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     },
+    "cart": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://192.168.92.128/5",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
+    },
+    "order_site": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://192.168.92.128/6",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+}
 
 # 日志配置
 LOGGING = {
